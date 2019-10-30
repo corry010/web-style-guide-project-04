@@ -1,0 +1,35 @@
+/* ============================================= */
+/*              Images                           */
+/* ============================================= */
+
+.img-avatar {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  @include img-m-w-h;
+
+}
+
+.img-frame {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 13px;
+  @include  img-m-w-h;
+  border: 1px solid #ccc;
+}
+
+.img-logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  @include media-q($breakpoint-med){
+    flex-basis: 25%
+  }
+}
+.logo{
+  @include media-q ($breakpoint-med){
+    margin-left: initial;
+    margin-right: initial;
+  }
+}

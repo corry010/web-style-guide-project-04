@@ -1,0 +1,70 @@
+/* ============================================= */
+/*              Buttons                          */
+/* ============================================= */
+
+.btn {
+  margin-top: 15px;
+  width: 100%;
+  color: $white;
+  border: none;
+  padding: 10px 0;
+  text-transform: uppercase;
+  border-radius: 5px;
+  @include media-q($breakpoint-med){
+    padding: 10px 30px;
+    + .btn {
+      margin-left: 10px;
+    }
+  }
+}
+
+
+@each $button, $color in $buttons {
+  .#{$button} {
+    background-color: $color;
+    &:hover{
+      transition: background-color, 0.5s ease-in;
+      background-color: lighten($color, 15%);
+    }
+  }
+}
+
+// .default {
+//   background-color: $default;
+//   &:hover{
+//     transition: background-color 0.5s ease-in;
+//     background-color: $default-light;
+//   }
+// }
+//
+// .error {
+//   background-color: $error;
+//   &:hover{
+//     transition: background-color 0.5s ease-in;
+//     background-color: $error-light;
+//   }
+// }
+//
+// .info {
+//   background-color: $info;
+//   &:hover{
+//     transition: background-color 0.5s ease-in;
+//     background-color: $info-light;
+//   }
+// }
+//
+// .success {
+//   background-color: $success;
+//   &:hover{
+//     transition: background-color 0.5s ease-in;
+//     background-color: $success-light;
+//   }
+// }
+//
+// .warning {
+//   background-color: $warning;
+//   &:hover{
+//     transition: background-color 0.5s ease-in;
+//     background-color: $warning-light;
+//   }
+// }
